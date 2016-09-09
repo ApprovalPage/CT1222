@@ -20,7 +20,7 @@ lib.properties = {
 
 
 lib.ssMetadata = [
-		{name:"CT1222_Sound_300x250_atlas_P_", frames: [[0,504,300,250],[0,0,300,250],[0,252,300,250]]}
+		{name:"CT1222_Sound_300x250_atlas_P_", frames: [[0,252,300,250],[0,0,300,250],[0,504,300,250]]}
 ];
 
 
@@ -413,7 +413,7 @@ p.nominalBounds = null;
 	this.instance_2.setTransform(150.8,125);
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(8).to({_off:false},0).wait(22).to({scaleX:1.53,scaleY:1.53},0).wait(27).to({regX:0.1,regY:0.1,scaleX:2.41,scaleY:2.41,x:151,y:125.3},0).to({_off:true},25).wait(278));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(6).to({_off:false},0).wait(22).to({scaleX:1.53,scaleY:1.53},0).wait(22).to({regX:0.1,regY:0.1,scaleX:2.41,scaleY:2.41,x:151,y:125.3},0).wait(1).to({scaleX:2.6,scaleY:2.6,x:150.9,y:125.2},0).wait(1).to({scaleX:2.41,scaleY:2.41,x:151,y:125.3},0).wait(1).to({scaleX:2.6,scaleY:2.6,x:150.9,y:125.2},0).wait(1).to({scaleX:2.41,scaleY:2.41,x:151,y:125.3},0).wait(1).to({scaleX:2.6,scaleY:2.6,x:150.9,y:125.2},0).wait(1).to({scaleX:2.41,scaleY:2.41,x:151,y:125.3},0).to({_off:true},26).wait(278));
 
 	// woofer 2
 	this.instance_3 = new lib.woofer();
