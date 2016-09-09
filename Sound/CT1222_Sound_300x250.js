@@ -399,21 +399,21 @@ p.nominalBounds = null;
 	this.instance.setTransform(150,202);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(186).to({_off:false},0).to({y:125},4).wait(170));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(111).to({_off:false},0).to({y:125},4).wait(245));
 
 	// guarantee
 	this.instance_1 = new lib.guarantee();
 	this.instance_1.setTransform(148.3,58.6);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(162).to({_off:false},0).to({x:150,y:131},4).wait(194));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(87).to({_off:false},0).to({x:150,y:131},4).wait(35).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(67).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(63).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(49).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(1).to({scaleX:1.05,scaleY:1.05},0).wait(1).to({scaleX:1,scaleY:1},0).wait(27));
 
 	// HEAD boom
 	this.instance_2 = new lib.HEADBoom();
 	this.instance_2.setTransform(150.8,125);
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(24).to({_off:false},0).to({_off:true},29).wait(23).to({_off:false,scaleX:1.53,scaleY:1.53},0).to({_off:true},29).wait(27).to({_off:false,regX:0.1,regY:0.1,scaleX:2.41,scaleY:2.41,x:151,y:125.3},0).to({_off:true},23).wait(205));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(8).to({_off:false},0).wait(22).to({scaleX:1.53,scaleY:1.53},0).wait(27).to({regX:0.1,regY:0.1,scaleX:2.41,scaleY:2.41,x:151,y:125.3},0).to({_off:true},25).wait(278));
 
 	// woofer 2
 	this.instance_3 = new lib.woofer();
@@ -424,8 +424,8 @@ p.nominalBounds = null;
 	this.instance_4.setTransform(150,125);
 	this.instance_4._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(11).to({_off:false},0).to({_off:true},1).wait(55).to({_off:false},0).to({_off:true},1).wait(53).to({_off:false},0).to({_off:true},1).wait(92).to({_off:false},0).to({_off:true},1).wait(46).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(43).to({_off:false},0).to({_off:true},1).wait(46));
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(13).to({_off:false},0).to({alpha:0},22).to({_off:true},1).wait(33).to({_off:false,alpha:1},0).to({alpha:0},20).to({_off:true},1).wait(33).to({_off:false,alpha:1},0).to({_off:true},20).wait(73).to({_off:false},0).to({_off:true},22).wait(38).to({_off:false},0).to({alpha:0},18).to({_off:true},1).wait(20).to({_off:false,alpha:1},0).to({_off:true},32).wait(13));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(6).to({_off:false},0).to({_off:true},1).wait(21).to({_off:false},0).to({_off:true},1).wait(21).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(68).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(65).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(61).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(47).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(1).to({_off:false},0).to({_off:true},1).wait(26));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(8).to({_off:false},0).to({alpha:0},15).to({_off:true},1).wait(6).to({_off:false,alpha:1},0).to({alpha:0},14).to({_off:true},1).wait(13).to({_off:false,alpha:1},0).to({alpha:0},23).to({_off:true},1).wait(53).to({_off:false,alpha:1},0).to({alpha:0},23).to({_off:true},1).wait(50).to({_off:false,alpha:1},0).to({alpha:0},23).to({_off:true},1).wait(46).to({_off:false,alpha:1},0).to({alpha:0},23).to({_off:true},1).wait(32).to({_off:false,alpha:1},0).to({alpha:0},23).to({_off:true},1).wait(1));
 
 	// woofer
 	this.instance_5 = new lib.woofer();
