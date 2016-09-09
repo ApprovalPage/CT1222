@@ -20,7 +20,7 @@ lib.properties = {
 
 
 lib.ssMetadata = [
-		{name:"CT1222_XOvision_300x600_atlas_P_", frames: [[0,602,300,250],[302,0,300,600],[0,0,300,600]]}
+		{name:"CT1222_XOvision_300x600_atlas_P_", frames: [[0,602,300,250],[0,0,300,600],[302,0,300,600]]}
 ];
 
 
