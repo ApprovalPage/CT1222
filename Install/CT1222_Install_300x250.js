@@ -12,15 +12,16 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-		{src:"images/CT1222_XOvision_300x250_bkgd.jpg", id:"CT1222_XOvision_300x250_bkgd"},
-		{src:"images/CT1222_Install_300x250_atlas_P_.png", id:"CT1222_Install_300x250_atlas_P_"}
+		{src:"images/CT1222_Install_300x250_atlas_P_.png", id:"CT1222_Install_300x250_atlas_P_"},
+		{src:"images/CT1222_Install_300x250_atlas_NP_.jpg", id:"CT1222_Install_300x250_atlas_NP_"}
 	]
 };
 
 
 
 lib.ssMetadata = [
-		{name:"CT1222_Install_300x250_atlas_P_", frames: [[302,0,300,250],[0,0,300,250],[604,0,300,250],[302,252,300,250],[0,252,300,250]]}
+		{name:"CT1222_Install_300x250_atlas_P_", frames: [[302,0,300,250],[604,0,300,250],[0,252,300,250],[302,252,300,250],[0,0,300,250]]},
+		{name:"CT1222_Install_300x250_atlas_NP_", frames: [[0,502,300,250],[0,0,500,500]]}
 ];
 
 
@@ -36,9 +37,10 @@ lib.webfontAvailable = function(family) {
 
 
 (lib.CT1222_XOvision_300x250_bkgd = function() {
-	this.initialize(img.CT1222_XOvision_300x250_bkgd);
-}).prototype = p = new cjs.Bitmap();
-p.nominalBounds = new cjs.Rectangle(0,0,300,250);
+	this.spriteSheet = ss["CT1222_Install_300x250_atlas_NP_"];
+	this.gotoAndStop(0);
+}).prototype = p = new cjs.Sprite();
+
 
 
 (lib.Install_300x250_Coaxial = function() {
@@ -65,6 +67,13 @@ p.nominalBounds = new cjs.Rectangle(0,0,300,250);
 (lib.Install_300x250_Woofer = function() {
 	this.spriteSheet = ss["CT1222_Install_300x250_atlas_P_"];
 	this.gotoAndStop(3);
+}).prototype = p = new cjs.Sprite();
+
+
+
+(lib.smoke_AS_92135327500px = function() {
+	this.spriteSheet = ss["CT1222_Install_300x250_atlas_NP_"];
+	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -100,6 +109,19 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
+
+
+(lib.Tween5 = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Layer 1
+	this.instance = new lib.smoke_AS_92135327500px();
+	this.instance.setTransform(-37.5,-37.5,0.15,0.15);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-37.5,-37.5,75,75);
 
 
 (lib.redteam = function(mode,startPosition,loop) {
@@ -484,6 +506,18 @@ p.nominalBounds = null;
 p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 
 
+(lib.smokeassetmc = function(mode,startPosition,loop) {
+	this.initialize(mode,startPosition,loop,{});
+
+	// Layer 1
+	this.instance = new lib.Tween5("synched",0);
+
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
+
+}).prototype = p = new cjs.MovieClip();
+p.nominalBounds = new cjs.Rectangle(-37.5,-37.5,75,75);
+
+
 // stage content:
 (lib.CT1222_Install_300x250 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
@@ -508,88 +542,106 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(180).call(this.frame_180).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(180).call(this.frame_180).wait(33));
 
 	// clickthru
 	this.clickthrough_btn = new lib.CT1();
 	this.clickthrough_btn.setTransform(150,125,1.181,1.316,0,0,0,127,95);
 	new cjs.ButtonHelper(this.clickthrough_btn, 0, 1, 2, false, new lib.CT1(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.clickthrough_btn).wait(181));
+	this.timeline.addTween(cjs.Tween.get(this.clickthrough_btn).to({_off:true},181).wait(32));
 
 	// CTA
 	this.instance = new lib.CTAlockup();
 	this.instance.setTransform(150,202);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(145).to({_off:false},0).to({y:125},4).wait(32));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(145).to({_off:false},0).to({y:125},4).to({_off:true},32).wait(32));
 
 	// guarantee
 	this.instance_1 = new lib.guarantee();
 	this.instance_1.setTransform(148.3,58.6);
 	this.instance_1._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(121).to({_off:false},0).to({x:150,y:131},4).wait(56));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(121).to({_off:false},0).to({x:150,y:131},4).to({_off:true},56).wait(32));
 
 	// red team
 	this.instance_2 = new lib.redteam();
 	this.instance_2.setTransform(150,311);
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(97).to({_off:false},0).to({y:125},4).wait(80));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(97).to({_off:false},0).to({y:125},4).to({_off:true},80).wait(32));
 
 	// HEAD build
 	this.instance_3 = new lib.HEADover();
 	this.instance_3.setTransform(150,236);
 	this.instance_3._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(56).to({_off:false},0).to({y:106.2},4).wait(37).to({y:-52.8},4).to({_off:true},1).wait(79));
+	this.timeline.addTween(cjs.Tween.get(this.instance_3).wait(56).to({_off:false},0).to({y:106.2},4).wait(37).to({y:-52.8},4).to({_off:true},1).wait(111));
 
 	// HEAD dream
 	this.instance_4 = new lib.HEADquality();
 	this.instance_4.setTransform(150.8,125);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(56).to({y:106.2},4).wait(37).to({y:-52.8},4).to({_off:true},1).wait(79));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(56).to({y:106.2},4).wait(37).to({y:-52.8},4).to({_off:true},1).wait(111));
 
-	// tweet R
-	this.instance_5 = new lib.tweet();
-	this.instance_5.setTransform(150,125);
+	// smoke 2
+	this.instance_5 = new lib.smokeassetmc();
+	this.instance_5.setTransform(249.3,93.1,1.615,1.615,-120,0,0,-0.1,0.1);
+	this.instance_5.alpha = 0.602;
+	this.instance_5.compositeOperation = "lighter";
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(45).to({_off:false},0).wait(136));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(30).to({_off:false},0).to({regX:0,scaleX:1.57,scaleY:1.57,rotation:14.8,x:253,y:90.2,alpha:1},1).to({regY:0,scaleX:0.43,scaleY:0.43,rotation:15,y:90,alpha:0},7,cjs.Ease.get(-1)).to({_off:true},1).wait(4).to({_off:false,regX:-0.1,regY:0.1,scaleX:1.38,scaleY:1.38,rotation:-120,x:234.5,y:179.3,alpha:0.602},0).to({regX:0.1,scaleX:1.34,scaleY:1.34,rotation:14.8,x:237.9,y:176.9,alpha:1},1).to({regY:-0.1,scaleX:0.37,scaleY:0.37,rotation:15,x:237.8,y:176.7,alpha:0},7,cjs.Ease.get(-1)).to({_off:true},1).wait(161));
 
-	// tweet L
-	this.instance_6 = new lib.tweet();
-	this.instance_6.setTransform(-19,125);
+	// smoke
+	this.instance_6 = new lib.smokeassetmc();
+	this.instance_6.setTransform(150.3,125.1,1.615,1.615,-120,0,0,-0.1,0.1);
+	this.instance_6.alpha = 0.602;
+	this.instance_6.compositeOperation = "lighter";
 	this.instance_6._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(36).to({_off:false},0).wait(145));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(17).to({_off:false},0).to({regX:0,scaleX:2.27,scaleY:2.27,rotation:14.8,x:150,y:125.2,alpha:1},1).to({regY:0,scaleX:0.63,scaleY:0.63,rotation:15,y:125,alpha:0},7,cjs.Ease.get(-1)).wait(5).to({regX:-0.1,regY:0.1,scaleX:1.62,scaleY:1.62,rotation:-120,x:46.3,y:82.8,alpha:0.602},0).to({regX:8.1,regY:-2,scaleX:1.57,scaleY:1.57,rotation:-45.2,x:62.1,y:90.2,alpha:1},1).to({regX:0.1,regY:0.1,scaleX:0.43,scaleY:0.43,rotation:-60,x:43,y:90,alpha:0},7,cjs.Ease.get(-1)).to({_off:true},1).wait(4).to({_off:false,regX:-0.1,scaleX:1.38,scaleY:1.38,rotation:-120,x:60.9,y:170.5,alpha:0.602},0).to({regX:8.1,regY:-1.9,scaleX:1.34,scaleY:1.34,rotation:-81,x:74.5,y:176.9,alpha:1},1).to({regX:0,regY:0,scaleX:0.37,scaleY:0.37,rotation:-105,x:58.2,y:176.7,alpha:0},7,cjs.Ease.get(-1)).to({_off:true},1).wait(161));
 
-	// coax R
-	this.instance_7 = new lib.coax();
+	// tweet R
+	this.instance_7 = new lib.tweet();
 	this.instance_7.setTransform(150,125);
 	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(32).to({_off:false},0).wait(149));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(44).to({_off:false},0).to({_off:true},137).wait(32));
 
-	// coax L
-	this.instance_8 = new lib.coax();
-	this.instance_8.setTransform(-51,125);
+	// tweet L
+	this.instance_8 = new lib.tweet();
+	this.instance_8.setTransform(-19,125);
 	this.instance_8._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(23).to({_off:false},0).wait(158));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(44).to({_off:false},0).to({_off:true},137).wait(32));
 
-	// woofer
-	this.instance_9 = new lib.woofer();
+	// coax R
+	this.instance_9 = new lib.coax();
 	this.instance_9.setTransform(150,125);
 	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(18).to({_off:false},0).wait(163));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(31).to({_off:false},0).to({_off:true},150).wait(32));
+
+	// coax L
+	this.instance_10 = new lib.coax();
+	this.instance_10.setTransform(-51,125);
+	this.instance_10._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(31).to({_off:false},0).to({_off:true},150).wait(32));
+
+	// woofer
+	this.instance_11 = new lib.woofer();
+	this.instance_11.setTransform(150,125);
+	this.instance_11._off = true;
+
+	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(18).to({_off:false},0).to({_off:true},163).wait(32));
 
 	// bkgd
-	this.instance_10 = new lib.CT1222_XOvision_300x250_bkgd();
+	this.instance_12 = new lib.CT1222_XOvision_300x250_bkgd();
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(181));
+	this.timeline.addTween(cjs.Tween.get(this.instance_12).to({_off:true},181).wait(32));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(150,125,300,250);
