@@ -20,7 +20,7 @@ lib.properties = {
 
 
 lib.ssMetadata = [
-		{name:"CT1222_Pioneer_300x250_atlas_P_", frames: [[302,0,126,117],[0,252,300,250],[0,0,300,250],[0,504,300,250],[0,756,300,250]]}
+		{name:"CT1222_Pioneer_300x250_atlas_P_", frames: [[302,0,126,117],[0,0,300,250],[0,252,300,250],[0,756,300,250],[0,504,300,250]]}
 ];
 
 
@@ -515,28 +515,28 @@ p.nominalBounds = null;
 	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(180).call(this.frame_180).wait(5));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(180).call(this.frame_180).wait(1));
 
 	// clickthru
 	this.clickthrough_btn = new lib.CT1();
 	this.clickthrough_btn.setTransform(150,125,1.181,1.316,0,0,0,127,95);
 	new cjs.ButtonHelper(this.clickthrough_btn, 0, 1, 2, false, new lib.CT1(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.clickthrough_btn).to({_off:true},181).wait(4));
+	this.timeline.addTween(cjs.Tween.get(this.clickthrough_btn).wait(181));
 
 	// CTA
 	this.instance = new lib.CTAlockup();
 	this.instance.setTransform(150,202);
 	this.instance._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(167).to({_off:false},0).to({y:125},4).to({_off:true},10).wait(4));
+	this.timeline.addTween(cjs.Tween.get(this.instance).wait(167).to({_off:false},0).to({y:125},4).wait(10));
 
 	// mask (mask)
 	var mask = new cjs.Shape();
 	mask._off = true;
 	var mask_graphics_167 = new cjs.Graphics().p("A41ThIAAtNMAxrAAAIAANNg");
 
-	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(167).to({graphics:mask_graphics_167,x:152,y:125}).wait(18));
+	this.timeline.addTween(cjs.Tween.get(mask).to({graphics:null,x:0,y:0}).wait(167).to({graphics:mask_graphics_167,x:152,y:125}).wait(14));
 
 	// Only 29.96
 	this.instance_1 = new lib.Onlyprice();
@@ -545,14 +545,14 @@ p.nominalBounds = null;
 
 	this.instance_1.mask = mask;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(115).to({_off:false},0).to({y:125},4).wait(48).to({y:49},4).to({_off:true},1).wait(13));
+	this.timeline.addTween(cjs.Tween.get(this.instance_1).wait(115).to({_off:false},0).to({y:125},4).wait(48).to({y:49},4).to({_off:true},1).wait(9));
 
 	// HEAD wirelessly
 	this.instance_2 = new lib.HEADgetblue();
 	this.instance_2.setTransform(427,125);
 	this.instance_2._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(76).to({_off:false},0).to({x:150},4).wait(35).to({y:-15},4).to({_off:true},62).wait(4));
+	this.timeline.addTween(cjs.Tween.get(this.instance_2).wait(76).to({_off:false},0).to({x:150},4).wait(35).to({y:-15},4).wait(62));
 
 	// bluetooth
 	this.instance_3 = new lib.Bluetooth();
@@ -565,39 +565,39 @@ p.nominalBounds = null;
 	this.instance_5 = new lib.Tween2("synched",0);
 	this.instance_5.setTransform(212.7,300);
 
-	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_3}]},48).to({state:[]},4).to({state:[{t:this.instance_3}]},3).to({state:[]},4).to({state:[{t:this.instance_3}]},3).to({state:[]},4).to({state:[{t:this.instance_3}]},3).to({state:[]},4).to({state:[{t:this.instance_4}]},3).to({state:[{t:this.instance_5}]},4).to({state:[]},1).wait(104));
-	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(76).to({_off:false},0).to({_off:true,y:300},4).wait(105));
+	this.timeline.addTween(cjs.Tween.get({}).to({state:[]}).to({state:[{t:this.instance_3}]},48).to({state:[]},4).to({state:[{t:this.instance_3}]},3).to({state:[]},4).to({state:[{t:this.instance_3}]},3).to({state:[]},4).to({state:[{t:this.instance_3}]},3).to({state:[]},4).to({state:[{t:this.instance_4}]},3).to({state:[{t:this.instance_5}]},4).to({state:[]},1).wait(100));
+	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(76).to({_off:false},0).to({_off:true,y:300},4).wait(101));
 
 	// phone
 	this.instance_6 = new lib.TunerPhone();
 	this.instance_6.setTransform(150,226);
 	this.instance_6._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(41).to({_off:false},0).to({y:125},5).wait(30).to({y:264},4).to({_off:true},1).wait(104));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(41).to({_off:false},0).to({y:125},5).wait(30).to({y:264},4).to({_off:true},1).wait(100));
 
 	// HEAD quality that
 	this.instance_7 = new lib.HEADover();
 	this.instance_7.setTransform(350.4,238.9,2.5,2.5);
 	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(42).to({_off:false},0).to({scaleX:1,scaleY:1,x:150,y:125},4).wait(69).to({y:108},4).to({_off:true},62).wait(4));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(42).to({_off:false},0).to({scaleX:1,scaleY:1,x:150,y:125},4).wait(69).to({y:108},4).wait(62));
 
 	// HEAD quality
 	this.instance_8 = new lib.HEADquality();
 	this.instance_8.setTransform(150.8,125);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(42).to({alpha:0},4).to({_off:true},1).wait(138));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(42).to({alpha:0},4).to({_off:true},1).wait(134));
 
 	// deck
 	this.instance_9 = new lib.deck();
 	this.instance_9.setTransform(150,125);
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).to({_off:true},181).wait(4));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(181));
 
 	// bkgd
 	this.instance_10 = new lib.CT1222_XOvision_300x250_bkgd();
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).to({_off:true},181).wait(4));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(181));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(150,125,300,250);
