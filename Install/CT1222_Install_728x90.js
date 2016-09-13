@@ -12,16 +12,15 @@ lib.properties = {
 	opacity: 1.00,
 	webfonts: {},
 	manifest: [
-		{src:"images/CT1222_Install_728x90_atlas_P_.png", id:"CT1222_Install_728x90_atlas_P_"},
-		{src:"images/CT1222_Install_728x90_atlas_NP_.jpg", id:"CT1222_Install_728x90_atlas_NP_"}
+		{src:"images/_728x90_bkgd.jpg", id:"_728x90_bkgd"},
+		{src:"images/CT1222_Install_728x90_atlas_P_.png", id:"CT1222_Install_728x90_atlas_P_"}
 	]
 };
 
 
 
 lib.ssMetadata = [
-		{name:"CT1222_Install_728x90_atlas_P_", frames: [[604,0,300,250],[0,0,300,250],[302,252,300,250],[302,0,300,250],[0,252,300,250]]},
-		{name:"CT1222_Install_728x90_atlas_NP_", frames: [[0,502,728,90],[0,0,500,500]]}
+		{name:"CT1222_Install_728x90_atlas_P_", frames: [[0,252,300,250],[604,0,300,250],[302,252,300,250],[302,0,300,250],[0,0,300,250]]}
 ];
 
 
@@ -37,10 +36,9 @@ lib.webfontAvailable = function(family) {
 
 
 (lib._728x90_bkgd = function() {
-	this.spriteSheet = ss["CT1222_Install_728x90_atlas_NP_"];
-	this.gotoAndStop(0);
-}).prototype = p = new cjs.Sprite();
-
+	this.initialize(img._728x90_bkgd);
+}).prototype = p = new cjs.Bitmap();
+p.nominalBounds = new cjs.Rectangle(0,0,728,90);
 
 
 (lib.Install_300x250_Coaxial = function() {
@@ -67,13 +65,6 @@ lib.webfontAvailable = function(family) {
 (lib.Install_300x250_Woofer = function() {
 	this.spriteSheet = ss["CT1222_Install_728x90_atlas_P_"];
 	this.gotoAndStop(3);
-}).prototype = p = new cjs.Sprite();
-
-
-
-(lib.smoke_AS_92135327500px = function() {
-	this.spriteSheet = ss["CT1222_Install_728x90_atlas_NP_"];
-	this.gotoAndStop(1);
 }).prototype = p = new cjs.Sprite();
 
 
@@ -109,19 +100,6 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
-
-
-(lib.Tween5 = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Layer 1
-	this.instance = new lib.smoke_AS_92135327500px();
-	this.instance.setTransform(-37.5,-37.5,0.15,0.15);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-37.5,-37.5,75,75);
 
 
 (lib.redteam = function(mode,startPosition,loop) {
@@ -509,18 +487,6 @@ p.nominalBounds = null;
 p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 
 
-(lib.smokeassetmc = function(mode,startPosition,loop) {
-	this.initialize(mode,startPosition,loop,{});
-
-	// Layer 1
-	this.instance = new lib.Tween5("synched",0);
-
-	this.timeline.addTween(cjs.Tween.get(this.instance).wait(1));
-
-}).prototype = p = new cjs.MovieClip();
-p.nominalBounds = new cjs.Rectangle(-37.5,-37.5,75,75);
-
-
 // stage content:
 (lib.CT1222_Install_728x90 = function(mode,startPosition,loop) {
 	this.initialize(mode,startPosition,loop,{});
@@ -588,63 +554,45 @@ p.nominalBounds = new cjs.Rectangle(-37.5,-37.5,75,75);
 
 	this.timeline.addTween(cjs.Tween.get(this.instance_4).wait(97).to({y:-39.1},4).to({_off:true},1).wait(79));
 
-	// smoke 2
-	this.instance_5 = new lib.smokeassetmc();
-	this.instance_5.setTransform(490,44.1,1.615,1.615,-120,0,0,-0.1,0.1);
-	this.instance_5.alpha = 0.602;
-	this.instance_5.compositeOperation = "lighter";
+	// tweet R
+	this.instance_5 = new lib.tweet();
+	this.instance_5.setTransform(495,1);
 	this.instance_5._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(30).to({_off:false},0).to({regX:0,scaleX:1.57,scaleY:1.57,rotation:14.8,x:493.7,y:41.2,alpha:1},1).to({regY:0,scaleX:0.43,scaleY:0.43,rotation:15,y:41,alpha:0},7,cjs.Ease.get(-1)).to({_off:true},1).wait(4).to({_off:false,regX:-0.1,regY:0.1,scaleX:1.38,scaleY:1.38,rotation:-120,x:577.9,y:45.6,alpha:0.602},0).to({regX:0.1,scaleX:1.34,scaleY:1.34,rotation:14.8,x:581.3,y:43.2,alpha:1},1).to({regY:-0.1,scaleX:0.37,scaleY:0.37,rotation:15,x:581.2,y:43,alpha:0},7,cjs.Ease.get(-1)).to({_off:true},1).wait(129));
-
-	// smoke
-	this.instance_6 = new lib.smokeassetmc();
-	this.instance_6.setTransform(364.3,40.1,1.615,1.615,-120,0,0,-0.1,0.1);
-	this.instance_6.alpha = 0.602;
-	this.instance_6.compositeOperation = "lighter";
-	this.instance_6._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(17).to({_off:false},0).to({regX:0,scaleX:2.27,scaleY:2.27,rotation:14.8,x:364,y:40.2,alpha:1},1).to({regY:0,scaleX:0.63,scaleY:0.63,rotation:15,y:40,alpha:0},7,cjs.Ease.get(-1)).wait(5).to({regX:-0.1,regY:0.1,scaleX:1.62,scaleY:1.62,rotation:-120,x:246,y:33.8,alpha:0.602},0).to({regX:8.1,regY:-2,scaleX:1.57,scaleY:1.57,rotation:-45.2,x:261.8,y:41.2,alpha:1},1).to({regX:0.1,regY:0.1,scaleX:0.43,scaleY:0.43,rotation:-60,x:242.7,y:41,alpha:0},7,cjs.Ease.get(-1)).to({_off:true},1).wait(4).to({_off:false,regX:-0.1,scaleX:1.38,scaleY:1.38,rotation:-120,x:158.9,y:36.8,alpha:0.602},0).to({regX:8.1,regY:-1.9,scaleX:1.34,scaleY:1.34,rotation:-81,x:172.5,y:43.2,alpha:1},1).to({regX:0,regY:0,scaleX:0.37,scaleY:0.37,rotation:-105,x:156.3,y:43,alpha:0},7,cjs.Ease.get(-1)).to({_off:true},1).wait(129));
-
-	// tweet R
-	this.instance_7 = new lib.tweet();
-	this.instance_7.setTransform(495,1);
-	this.instance_7._off = true;
-
-	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(44).to({_off:false},0).wait(137));
+	this.timeline.addTween(cjs.Tween.get(this.instance_5).wait(44).to({_off:false},0).wait(137));
 
 	// tweet L
-	this.instance_8 = new lib.tweet();
-	this.instance_8.setTransform(85,1);
-	this.instance_8._off = true;
+	this.instance_6 = new lib.tweet();
+	this.instance_6.setTransform(85,1);
+	this.instance_6._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(44).to({_off:false},0).wait(137));
+	this.timeline.addTween(cjs.Tween.get(this.instance_6).wait(44).to({_off:false},0).wait(137));
 
 	// coax R
-	this.instance_9 = new lib.coax();
-	this.instance_9.setTransform(398,70);
-	this.instance_9._off = true;
+	this.instance_7 = new lib.coax();
+	this.instance_7.setTransform(398,70);
+	this.instance_7._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(31).to({_off:false},0).wait(150));
+	this.timeline.addTween(cjs.Tween.get(this.instance_7).wait(31).to({_off:false},0).wait(150));
 
 	// coax L
-	this.instance_10 = new lib.coax();
-	this.instance_10.setTransform(151,66);
-	this.instance_10._off = true;
+	this.instance_8 = new lib.coax();
+	this.instance_8.setTransform(151,66);
+	this.instance_8._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(31).to({_off:false},0).wait(150));
+	this.timeline.addTween(cjs.Tween.get(this.instance_8).wait(31).to({_off:false},0).wait(150));
 
 	// woofer
-	this.instance_11 = new lib.woofer();
-	this.instance_11.setTransform(369,50);
-	this.instance_11._off = true;
+	this.instance_9 = new lib.woofer();
+	this.instance_9.setTransform(369,50);
+	this.instance_9._off = true;
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_11).wait(18).to({_off:false},0).wait(163));
+	this.timeline.addTween(cjs.Tween.get(this.instance_9).wait(18).to({_off:false},0).wait(163));
 
 	// bkgd
-	this.instance_12 = new lib._728x90_bkgd();
+	this.instance_10 = new lib._728x90_bkgd();
 
-	this.timeline.addTween(cjs.Tween.get(this.instance_12).wait(181));
+	this.timeline.addTween(cjs.Tween.get(this.instance_10).wait(181));
 
 }).prototype = p = new cjs.MovieClip();
 p.nominalBounds = new cjs.Rectangle(364,44.4,728.3,90.6);
