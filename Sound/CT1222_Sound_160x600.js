@@ -384,10 +384,9 @@ p.nominalBounds = null;
 
 	// timeline functions:
 	this.frame_0 = function() {
-		this.clickthrough_btn.addEventListener("click", clickThroughFunc.bind(this));
-		function clickThroughFunc(){
-		    EB.clickthrough();
-		}
+		this.clickthru_btn.on("click", function(evt){
+		  window.open(clickTag, "_blank");
+		});
 	}
 	this.frame_359 = function() {
 		this.stop();
@@ -397,11 +396,11 @@ p.nominalBounds = null;
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(359).call(this.frame_359).wait(1));
 
 	// clickthru
-	this.clickthrough_btn = new lib.CT1();
-	this.clickthrough_btn.setTransform(80,475.7,0.63,4.987,0,0,0,127,95.2);
-	new cjs.ButtonHelper(this.clickthrough_btn, 0, 1, 2, false, new lib.CT1(), 3);
+	this.clickthru_btn = new lib.CT1();
+	this.clickthru_btn.setTransform(80,475.7,0.63,4.987,0,0,0,127,95.2);
+	new cjs.ButtonHelper(this.clickthru_btn, 0, 1, 2, false, new lib.CT1(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.clickthrough_btn).wait(360));
+	this.timeline.addTween(cjs.Tween.get(this.clickthru_btn).wait(360));
 
 	// CTA
 	this.instance = new lib.CTAlockup();
