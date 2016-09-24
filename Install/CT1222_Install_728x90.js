@@ -20,7 +20,7 @@ lib.properties = {
 
 
 lib.ssMetadata = [
-		{name:"CT1222_Install_728x90_atlas_P_", frames: [[0,252,300,250],[604,0,300,250],[302,252,300,250],[302,0,300,250],[0,0,300,250]]}
+		{name:"CT1222_Install_728x90_atlas_P_", frames: [[302,252,300,250],[302,0,300,250],[0,252,300,250],[0,0,300,250],[604,0,300,250]]}
 ];
 
 
@@ -493,10 +493,9 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 
 	// timeline functions:
 	this.frame_0 = function() {
-		this.clickthrough_btn.addEventListener("click", clickThroughFunc.bind(this));
-		function clickThroughFunc(){
-		    EB.clickthrough();
-		}
+		this.clickthru_btn.on("click", function(evt){
+		  window.open(clickTag, "_blank");
+		});
 	}
 	this.frame_180 = function() {
 		if(!this.alreadyExecuted){
@@ -514,11 +513,11 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(180).call(this.frame_180).wait(1));
 
 	// clickthru
-	this.clickthrough_btn = new lib.CT1();
-	this.clickthrough_btn.setTransform(363.5,44.7,2.867,0.477,0,0,0,126.8,95);
-	new cjs.ButtonHelper(this.clickthrough_btn, 0, 1, 2, false, new lib.CT1(), 3);
+	this.clickthru_btn = new lib.CT1();
+	this.clickthru_btn.setTransform(363.5,44.7,2.867,0.477,0,0,0,126.8,95);
+	new cjs.ButtonHelper(this.clickthru_btn, 0, 1, 2, false, new lib.CT1(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.clickthrough_btn).wait(181));
+	this.timeline.addTween(cjs.Tween.get(this.clickthru_btn).wait(181));
 
 	// red team
 	this.instance = new lib.redteam();
