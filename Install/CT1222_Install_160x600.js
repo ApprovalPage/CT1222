@@ -489,7 +489,12 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 	this.initialize(mode,startPosition,loop,{});
 
 	// timeline functions:
-	this.frame_179 = function() {
+	this.frame_0 = function() {
+		this.clickthru_btn.on("click", function(evt){
+		  window.open(clickTag, "_blank");
+		});
+	}
+	this.frame_180 = function() {
 		if(!this.alreadyExecuted){
 		this.alreadyExecuted=true;
 		this.loopNum=1;
@@ -500,14 +505,9 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 		}
 		}
 	}
-	this.frame_180 = function() {
-		this.clickthru_btn.on("click", function(evt){
-		  window.open(clickTag, "_blank");
-		});
-	}
 
 	// actions tween:
-	this.timeline.addTween(cjs.Tween.get(this).wait(179).call(this.frame_179).wait(1).call(this.frame_180).wait(1));
+	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(180).call(this.frame_180).wait(1));
 
 	// clickthru
 	this.clickthru_btn = new lib.CT1();
