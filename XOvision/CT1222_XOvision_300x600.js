@@ -20,7 +20,7 @@ lib.properties = {
 
 
 lib.ssMetadata = [
-		{name:"CT1222_XOvision_300x600_atlas_P_", frames: [[0,602,300,250],[0,0,300,600],[302,0,300,600]]}
+		{name:"CT1222_XOvision_300x600_atlas_P_", frames: [[0,602,300,250],[302,0,300,600],[0,0,300,600]]}
 ];
 
 
@@ -663,10 +663,9 @@ p.nominalBounds = null;
 
 	// timeline functions:
 	this.frame_0 = function() {
-		this.clickthrough_btn.addEventListener("click", clickThroughFunc.bind(this));
-		function clickThroughFunc(){
-		    EB.clickthrough();
-		}
+		this.clickthru_btn.on("click", function(evt){
+		  window.open(clickTag, "_blank");
+		});
 	}
 	this.frame_180 = function() {
 		if(!this.alreadyExecuted){
@@ -684,11 +683,11 @@ p.nominalBounds = null;
 	this.timeline.addTween(cjs.Tween.get(this).call(this.frame_0).wait(180).call(this.frame_180).wait(1));
 
 	// clickthru
-	this.clickthrough_btn = new lib.CT1();
-	this.clickthrough_btn.setTransform(150,125,1.181,1.316,0,0,0,127,95);
-	new cjs.ButtonHelper(this.clickthrough_btn, 0, 1, 2, false, new lib.CT1(), 3);
+	this.clickthru_btn = new lib.CT1();
+	this.clickthru_btn.setTransform(150,300,1.181,3.158,0,0,0,127,95);
+	new cjs.ButtonHelper(this.clickthru_btn, 0, 1, 2, false, new lib.CT1(), 3);
 
-	this.timeline.addTween(cjs.Tween.get(this.clickthrough_btn).wait(181));
+	this.timeline.addTween(cjs.Tween.get(this.clickthru_btn).wait(181));
 
 	// Only 29.96
 	this.instance = new lib.Only2996();
