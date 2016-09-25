@@ -20,7 +20,7 @@ lib.properties = {
 
 
 lib.ssMetadata = [
-		{name:"CT1222_XOvision_160x600_atlas_P_", frames: [[0,602,300,250],[0,0,300,600],[302,0,300,600]]}
+		{name:"CT1222_XOvision_160x600_atlas_P_", frames: [[0,602,300,250],[302,0,300,600],[0,0,300,600]]}
 ];
 
 
@@ -663,9 +663,14 @@ p.nominalBounds = null;
 
 	// timeline functions:
 	this.frame_0 = function() {
-		this.clickthru_btn.on("click", function(evt){
+		if(!this.alreadyyExecuted){
+		this.alreadyyExecuted=true;
+			this.clickthru_btn.on("click", function(evt){
 		  window.open(clickTag, "_blank");
 		});
+		} else {
+		gotoAndPlay(2);
+		}
 	}
 	this.frame_180 = function() {
 		if(!this.alreadyExecuted){
