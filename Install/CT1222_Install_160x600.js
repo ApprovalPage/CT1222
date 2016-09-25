@@ -490,9 +490,15 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,250);
 
 	// timeline functions:
 	this.frame_0 = function() {
-		this.clickthru_btn.on("click", function(evt){
+		if(!this.beenExecuted){
+		this.beenExecuted=true;
+			this.clickthru_btn.on("click", function(evt){
 		  window.open(clickTag, "_blank");
 		});
+		} else {
+			gotoAndPlay(2);
+		}
+		}
 	}
 	this.frame_180 = function() {
 		if(!this.alreadyExecuted){
