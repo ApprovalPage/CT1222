@@ -20,7 +20,7 @@ lib.properties = {
 
 
 lib.ssMetadata = [
-		{name:"CT1222_Install_300x600_atlas_P_", frames: [[302,0,300,600],[0,602,300,600],[0,1204,300,600],[0,0,300,600],[302,602,300,250]]}
+		{name:"CT1222_Install_300x600_atlas_P_", frames: [[302,0,300,600],[0,1204,300,600],[0,0,300,600],[0,602,300,600],[302,602,300,250]]}
 ];
 
 
@@ -490,9 +490,14 @@ p.nominalBounds = new cjs.Rectangle(-150,-125,300,600);
 
 	// timeline functions:
 	this.frame_0 = function() {
-		this.clickthru_btn.on("click", function(evt){
+		if(!this.alreadyyExecuted){
+		this.alreadyyExecuted=true;
+			this.clickthru_btn.on("click", function(evt){
 		  window.open(clickTag, "_blank");
 		});
+		} else {
+		gotoAndPlay(2);
+		}
 	}
 	this.frame_180 = function() {
 		if(!this.alreadyExecuted){
