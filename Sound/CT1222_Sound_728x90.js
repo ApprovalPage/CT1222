@@ -291,9 +291,14 @@ p.nominalBounds = null;
 
 	// timeline functions:
 	this.frame_0 = function() {
-		this.clickthru_btn.on("click", function(evt){
+		if(!this.alreadyyExecuted){
+		this.alreadyyExecuted=true;
+			this.clickthru_btn.on("click", function(evt){
 		  window.open(clickTag, "_blank");
 		});
+		} else {
+		gotoAndPlay(2);
+		}
 	}
 	this.frame_359 = function() {
 		this.stop();
